@@ -69,26 +69,3 @@
         width: 50%;
     }
 }
-
-@media (min-width: 500px){
-    .login{
-        margin: 1%;
-        width: 18%;
-        height: auto;
-    }
-    .mat-raised-button{
-        width: 30%;
-    }
-    .mat-form-field{
-        width: 50%;
-        display: block;
-        margin-right: auto;
-        margin-left: auto;
-    }
-    .container{
-        width: 90%;
-    }
-    .name{
-        width: 50%;
-    }
-}
