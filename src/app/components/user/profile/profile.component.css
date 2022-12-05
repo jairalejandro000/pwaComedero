@@ -13,24 +13,6 @@
 .mat-form-field{
     width: 100%;
 }
-@media (min-width: 700px) {
-    .profile {
-        width: 18%;
-    }
-    .mat-icon{
-        font-size: 40px;
-    }
-}
-@media (min-width: 1000px) {
-    .profile {
-        width: 15%;
-    }
-    .mat-icon{
-        font-size: 50px;
-        margin-top: 1%;
-        margin-bottom: auto; 
-    }
-}
 .container{
     width: 80%;
     height: auto;
@@ -42,4 +24,34 @@
 }
 .spacer {
     flex: 0.95 0.95 auto;
+}
+.name{
+    width: 50%;
+    display:inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+@media (min-width: 1000px) {
+    .profile {
+        width: 15%;
+    }
+    .mat-icon{
+        font-size: 50px;
+        margin-top: 1%;
+        margin-bottom: auto; 
+    }
+    .name{
+        width: 100%;
+    }
+}
+@media (min-width: 700px) {
+    .profile {
+        width: 18%;
+    }
+    .mat-icon{
+        font-size: 40px;
+    }
+    .name{
+        width: 100%;
+    }
 }

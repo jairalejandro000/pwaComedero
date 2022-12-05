@@ -10,14 +10,16 @@
             <mat-label>username</mat-label>
             <input matInput [readonly]='true' formControlName='username'/>
         </mat-form-field>
-        <mat-form-field appearance='outline'>
-            <mat-label>Name</mat-label>
-            <input matInput [readonly]='true' formControlName='name'/>
-        </mat-form-field>
-        <mat-form-field appearance='outline'>
-            <mat-label>Lastname</mat-label>
-            <input matInput [readonly]='true' formControlName='lastname'/>
-        </mat-form-field>
+        <div class='name'>
+            <mat-form-field appearance='outline'>
+                <mat-label>Name</mat-label>
+                <input matInput [readonly]='true' formControlName='name'/>
+            </mat-form-field>
+            <mat-form-field appearance='outline'>
+                <mat-label>Lastname</mat-label>
+                <input matInput [readonly]='true' formControlName='lastname'/>
+            </mat-form-field>
+        </div>
         <mat-form-field appearance='outline'>
             <mat-label>Email</mat-label>
             <input matInput [readonly]='true' formControlName='email'/>
