@@ -7,7 +7,11 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatMenuModule } from '@angular/material/menu';
+
 
 const materialComponents = [
   MatFormFieldModule,
@@ -18,7 +22,10 @@ const materialComponents = [
   MatIconModule,
   FormsModule,
   ReactiveFormsModule,
-  HttpClientModule
+  MatGridListModule,
+  LayoutModule,
+  MatToolbarModule,
+  MatMenuModule
 ]
 @NgModule({
   exports: [materialComponents],

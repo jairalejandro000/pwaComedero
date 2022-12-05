@@ -1,0 +1,15 @@
+.card{
+    width: 60%;
+    height: auto;
+}
+.mat-grid-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.mat-grid-tile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}

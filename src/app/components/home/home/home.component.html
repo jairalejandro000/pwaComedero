@@ -1,0 +1,15 @@
+<app-toolbar></app-toolbar>
+<mat-grid-list [cols]='colSize' rowHeight='2:2'>
+    <mat-grid-tile *ngFor='let comedero of comederosList'
+    [colspan]='1'
+    [rowspan]='1'>
+    <mat-card class='card' (click)='details(comedero.id)'>
+        <img mat-card-image src='../../../../assets/comedero-mascotas.png'>
+        <mat-card-content>
+            <h2>
+              {{ comedero.name }}
+            </h2>
+          </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+</mat-grid-list>

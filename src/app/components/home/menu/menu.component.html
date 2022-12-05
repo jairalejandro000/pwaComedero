@@ -1,0 +1,25 @@
+<app-toolbar></app-toolbar>
+<mat-grid-list [cols]='2' rowHeight='2:2'>
+    <mat-grid-tile [colspan]='1'
+    [rowspan]='1'>
+    <mat-card class='card' (click)='alimentar()'>
+        <img mat-card-image src='../../../../assets/comedero-para-mascotas.png'>
+        <mat-card-content>
+            <h2>
+              Alimentar
+            </h2>
+          </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]='1'
+    [rowspan]='1'>
+    <mat-card class='card' (click)='info()'>
+        <img mat-card-image src='../../../../assets/informacion.png'>
+        <mat-card-content>
+            <h2>
+              Información
+            </h2>
+          </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+</mat-grid-list>

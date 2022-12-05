@@ -1,0 +1,15 @@
+<app-toolbar></app-toolbar>
+<mat-grid-list [cols]='colSize' rowHeight="2:2">
+    <mat-grid-tile *ngFor='let sensor of sensorsList'
+    [colspan]='1'
+    [rowspan]='1'>
+    <mat-card class='card' (click)='history(sensor.id)'>
+        <img mat-card-image src = '../../../../assets/comedero-mascotas.png'>
+        <mat-card-content>
+            <h2>
+              {{ sensor.name }}
+            </h2>
+          </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+</mat-grid-list>

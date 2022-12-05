@@ -1,0 +1,63 @@
+<div class='container'>
+    <img src='../../../../assets/dog cat.png' class='login'>
+    <form [formGroup]='formRegister' (ngSubmit)='register()'>
+        <mat-form-field appearance='outline'>
+            <mat-label>Username</mat-label>
+            <input matInput formControlName='username'/>
+            <mat-error *ngFor='let validation of validationMessages.username'>
+                <mat-error *ngIf="formRegister.get('username').hasError(validation.type)
+                    && (formRegister.get('username').dirty || formRegister.get('username').touched)">
+                    {{validation.message}}
+                </mat-error>
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance='outline'>
+            <mat-label>Name</mat-label>
+            <input matInput formControlName='name'/>
+            <mat-error *ngFor='let validation of validationMessages.name'>
+                <mat-error *ngIf="formRegister.get('name').hasError(validation.type)
+                    && (formRegister.get('name').dirty || formRegister.get('name').touched)">
+                    {{validation.message}}
+                </mat-error>
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance='outline'>
+            <mat-label>Lastname</mat-label>
+            <input matInput formControlName='lastname'/>
+            <mat-error *ngFor='let validation of validationMessages.lastname'>
+                <mat-error *ngIf="formRegister.get('lastname').hasError(validation.type)
+                    && (formRegister.get('lastname').dirty || formRegister.get('lastname').touched)">
+                    {{validation.message}}
+                </mat-error>
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance='outline'>
+            <mat-label>Password</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'" formControlName='password'/>
+            <button mat-icon-button matSuffix (click)='hide = !hide' [attr.aria-label]="'Hide password'" [attr.aria-pressed]='hide'>
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+            <mat-error *ngFor='let validation of validationMessages.password'>
+                <mat-error *ngIf="formRegister.get('password').hasError(validation.type)
+                    && (formRegister.get('password').dirty || formRegister.get('password').touched)">
+                    {{validation.message}}
+                </mat-error>
+            </mat-error>
+        </mat-form-field>
+        <!--<mat-form-field appearance='outline'>
+            <mat-label>Confirm Password</mat-label>
+            <input matInput [type]="hide2 ? 'password' : 'text'" formControlName='password'/>
+            <button mat-icon-button matSuffix (click)='hide2 = !hide' [attr.aria-label]="'Hide password'" [attr.aria-pressed]='hide'>
+                <mat-icon>{{hide2 ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+            <mat-error *ngFor='let validation of validationMessages.confirm_password'>
+                <mat-error *ngIf="formRegister.get('confirm_password').hasError(validation.type)
+                    && (formRegister.get('confirm_password').dirty || formRegister.get('confirm_password').touched)">
+                    {{validation.message}}
+                </mat-error>
+            </mat-error>
+        </mat-form-field>-->
+        <h3>¿Ya tienes una cuenta? <a routerLink='/'>Iniciar sesión</a></h3>
+        <button mat-raised-button type='submit'>Registrarse</button>
+    </form>
+</div>

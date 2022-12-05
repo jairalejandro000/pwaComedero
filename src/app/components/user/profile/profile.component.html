@@ -1,0 +1,26 @@
+<mat-toolbar>
+    <mat-icon routerLink='/'>home</mat-icon>
+    <span class='spacer'></span>
+    <mat-icon (click)='logout()'>exit_to_app</mat-icon>
+</mat-toolbar>
+<div class='container'>
+    <img class='profile' src='../../../../assets/comedero-profile.png'><br>
+    <form [formGroup]='formProfile'>
+        <mat-form-field appearance='outline'>
+            <mat-label>username</mat-label>
+            <input matInput [readonly]='true' formControlName='username'/>
+        </mat-form-field>
+        <mat-form-field appearance='outline'>
+            <mat-label>Name</mat-label>
+            <input matInput [readonly]='true' formControlName='name'/>
+        </mat-form-field>
+        <mat-form-field appearance='outline'>
+            <mat-label>Lastname</mat-label>
+            <input matInput [readonly]='true' formControlName='lastname'/>
+        </mat-form-field>
+        <mat-form-field appearance='outline'>
+            <mat-label>Email</mat-label>
+            <input matInput [readonly]='true' formControlName='email'/>
+        </mat-form-field>
+    </form>
+</div>
