@@ -4,12 +4,7 @@
     [colspan]='1'
     [rowspan]='1'>
     <mat-card class='card' (click)='history(sensor.id)'>
-        <img mat-card-image src = '../../../../assets/comedero-mascotas.png'>
-        <mat-card-content>
-            <h2>
-              {{ sensor.name }}
-            </h2>
-          </mat-card-content>
+        <img mat-card-image src ='../../../../assets/{{sensor.image}}.png'>
       </mat-card>
     </mat-grid-tile>
 </mat-grid-list>

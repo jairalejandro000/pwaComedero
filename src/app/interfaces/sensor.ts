@@ -1,4 +1,5 @@
 export interface ISensor {
     id?: number,
-    name?: string
+    name?: string,
+    image?: string
 }

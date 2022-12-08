@@ -1,6 +1,10 @@
 .card{
     width: 60%;
     height: auto;
+    background-color: transparent;
+}
+.mat-card{
+    box-shadow: none;
 }
 .mat-grid-list {
     display: flex;

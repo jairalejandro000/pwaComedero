@@ -6,6 +6,7 @@ import { IComedero } from 'src/app/interfaces/comedero';
 import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { NewComederoDialogComponent } from './new-comedero-dialog/new-comedero-dialog.component';
+import { OneSignal } from 'onesignal-ngx';
 
 @Component({
   selector: 'app-home',
@@ -28,7 +29,8 @@ export class HomeComponent implements OnInit {
 
   constructor(private userService: UserService, 
     private breakpointObserver: BreakpointObserver,
-    private router: Router, private dialog: MatDialog) {
+    private router: Router, private dialog: MatDialog,
+    private os: OneSignal) {
     breakpointObserver
       .observe([
         Breakpoints.XSmall,

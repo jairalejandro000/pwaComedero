@@ -1,13 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { OneSignal } from 'onesignal-ngx';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'pwaComedero';
-  constructor() {
+  constructor(private os: OneSignal) {
+  }
+  ngOnInit() {
+    this.os.init({
+      appId: 'f3e3245d-8d31-4421-a0ea-bf09e4c92571'
+    });
   }
   // onInit() {
   //   var OneSignal = window['OneSignal'] || [];

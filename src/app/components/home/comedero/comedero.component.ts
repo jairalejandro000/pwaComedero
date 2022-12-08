@@ -70,13 +70,14 @@ export class ComederoComponent implements OnInit {
     this.sensors();
   }
 
-  sensors(): void {
+  async sensors() {
     this.userService.sensors(this.id).subscribe({
       next: (v: any) => {
         let response = v.data;
         for(let x of response){
           this.sensorsList?.push(x.sensor);
         }
+        this.addImage();
       },
       error: (e) => console.log(e)
     })
@@ -84,6 +85,28 @@ export class ComederoComponent implements OnInit {
 
   history(id: number): void {
     console.log(id)
+  }
+
+  addImage(): void{
+    for(let x of this.sensorsList){
+      switch(x.id){
+        case 1:
+          x.image = "croquetonas";
+        break;
+        case 2:
+          x.image = "bocina";
+        break;
+        case 3:
+          x.image = "videollamada";
+        break;
+        case 4:
+          x.image = "grifo";
+        break;
+        case 5:
+          x.image = "sensor-de-temperatura";
+        break;
+      }
+    }
   }
 
 }
