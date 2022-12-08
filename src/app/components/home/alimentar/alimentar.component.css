@@ -1,0 +1,45 @@
+.card{
+    width: 50%;
+    height: auto;
+    background-color: transparent;
+}
+.mat-card{
+    box-shadow: none;
+}
+.mat-grid-list {
+    margin-top: 20%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.mat-grid-tile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+@media (min-width: 400px){
+    .mat-card-image {
+        margin: auto;
+        width: 90%;
+        height: auto;
+    }
+}
+@media (min-width: 600px){
+    .mat-grid-list {
+        margin-top: 5%;
+    }
+}
+@media (min-width: 1000px){
+    .mat-grid-list {
+        margin-top: 0%;
+    }
+}
+.title{
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+h1{
+    font-size: xx-large;
+}

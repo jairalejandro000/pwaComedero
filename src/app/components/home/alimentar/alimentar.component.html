@@ -1,1 +1,28 @@
-<p>alimentar works!</p>
+<app-toolbar></app-toolbar>
+<div class='title'>
+    <h1>{{ this.name }}</h1>
+</div>
+<mat-grid-list [cols]='2' rowHeight='2:2'>
+    <mat-grid-tile [colspan]='1'
+    [rowspan]='1'>
+    <mat-card class='card' >
+        <img mat-card-image src='../../../../assets/alimentos-para-mascotas.png'>
+        <mat-card-content>
+            <h2>
+              Comida
+            </h2>
+          </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]='1'
+    [rowspan]='1'>
+    <mat-card class='card' >
+        <img mat-card-image src='../../../../assets/agua.png'>
+        <mat-card-content>
+            <h2>
+              Agua
+            </h2>
+          </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+</mat-grid-list>

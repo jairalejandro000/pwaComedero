@@ -4,6 +4,8 @@ import { UserService } from 'src/app/services/user.service';
 import { Subject, takeUntil } from 'rxjs';
 import { IComedero } from 'src/app/interfaces/comedero';
 import { Router } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
+import { NewComederoDialogComponent } from './new-comedero-dialog/new-comedero-dialog.component';
 
 @Component({
   selector: 'app-home',
@@ -26,7 +28,7 @@ export class HomeComponent implements OnInit {
 
   constructor(private userService: UserService, 
     private breakpointObserver: BreakpointObserver,
-    private router: Router) {
+    private router: Router, private dialog: MatDialog) {
     breakpointObserver
       .observe([
         Breakpoints.XSmall,
@@ -82,5 +84,9 @@ export class HomeComponent implements OnInit {
 
   details(id: number): void {
     this.router.navigate(['/home/menu/' + id])
+  }
+
+  new(){
+    const dialogRef = this.dialog.open(NewComederoDialogComponent);
   }
 }

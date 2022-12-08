@@ -8,6 +8,7 @@ import { ToolbarComponent } from '../toolbar/toolbar.component';
 import { ComederoComponent } from './comedero/comedero.component';
 import { MenuComponent } from './menu/menu.component';
 import { AlimentarComponent } from './alimentar/alimentar.component';
+import { NewComederoDialogComponent } from './home/new-comedero-dialog/new-comedero-dialog.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { AlimentarComponent } from './alimentar/alimentar.component';
     ToolbarComponent,
     ComederoComponent,
     MenuComponent,
-    AlimentarComponent
+    AlimentarComponent,
+    NewComederoDialogComponent
   ],
   imports: [
     CommonModule,

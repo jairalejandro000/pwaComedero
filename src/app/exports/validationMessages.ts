@@ -1,7 +1,7 @@
 export const loginValidationMessages = {
     email: [
-        { type: 'required', message: 'El email es obligatorio' },
-        { type: 'pattern', message: 'El email no es valido' }
+        { type: 'required', message: 'El correo electrónico es obligatorio' },
+        { type: 'pattern', message: 'El correo electrónico no es valido' }
     ],
     password: [
         { type: 'required', message: 'La contraseña es obligatoria' },
@@ -22,8 +22,8 @@ export const registerValidationMessages = {
         { type: 'minlength', message: 'Los apellidos debe tener mínimo 5 caracteres' }
     ],
     email: [
-        { type: 'required', message: 'El email es obligatorio' },
-        { type: 'pattern', message: 'El email no es valido' }
+        { type: 'required', message: 'El correo electrónico es obligatorio' },
+        { type: 'pattern', message: 'El correo electrónico no es valido' }
     ],
     password: [
         { type: 'required', message: 'La contraseña es obligatoria' },
@@ -33,4 +33,15 @@ export const registerValidationMessages = {
         { type: 'required', message: 'La contraseña es obligatoria' },
         { type: 'minlength', message: 'La contraseña debe tener mínimo 8 caracteres' }
     ]*/
+}
+
+export const comederoValidationMessages = {
+    name: [
+        { type: 'required', message: 'El nombre es obligatorio' },
+        { type: 'minLength', message: 'El nombre debe tener tiener mínimo 3 caracteres' }
+    ],
+    code: [
+        { type: 'required', message: 'El código es obligatorio' },
+        { type: 'minLength', message: 'El nombre debe tener tiener 5 caracteres' }
+    ]    
 }

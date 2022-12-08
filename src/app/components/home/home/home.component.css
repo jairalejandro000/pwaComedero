@@ -2,6 +2,12 @@
     width: 60%;
     height: auto;
 }
+.container{
+    width: 90%;
+    height: auto;
+    justify-content: center;
+    margin: auto;
+}
 .mat-grid-list {
     display: flex;
     flex-wrap: wrap;

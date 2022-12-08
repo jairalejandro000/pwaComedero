@@ -1,5 +1,6 @@
 <app-toolbar></app-toolbar>
-<mat-grid-list [cols]='colSize' rowHeight='2:2'>
+<div class='container'>
+  <mat-grid-list [cols]='colSize' rowHeight='2:2' [gutterSize]="'0px'">
     <mat-grid-tile *ngFor='let comedero of comederosList'
     [colspan]='1'
     [rowspan]='1'>
@@ -12,4 +13,10 @@
           </mat-card-content>
       </mat-card>
     </mat-grid-tile>
-</mat-grid-list>
+    <mat-grid-tile
+    [colspan]='1'
+    [rowspan]='1'>
+        <img (click)='new()' src='../../../../assets/circulo-plus.png'>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

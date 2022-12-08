@@ -1,0 +1,26 @@
+<div class='container'>
+  <img src='../../../../assets/dog cat.png' class='login'>
+  <form [formGroup]='formComedero' (ngSubmit)='addComedero()'>
+      <mat-form-field appearance='outline'>
+          <mat-label>Nombre</mat-label>
+          <input matInput formControlName='name'/>
+          <mat-error *ngFor='let validation of validationMessages.name'>
+            <mat-error *ngIf="formComedero.get('name').hasError(validation.type)
+                && (formComedero.get('name').dirty || formComedero.get('name').touched)">
+                {{validation.message}}
+            </mat-error>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance='outline'>
+        <mat-label>Código</mat-label>
+          <input matInput formControlName='code'/>
+          <mat-error *ngFor='let validation of validationMessages.code'>
+            <mat-error *ngIf="formComedero.get('code').hasError(validation.type)
+                && (formComedero.get('code').dirty || formComedero.get('code').touched)">
+                {{validation.message}}
+            </mat-error>
+        </mat-error>
+      </mat-form-field>
+      <button mat-raised-button type='submit' [disabled]='formComedero.invalid'>Crear</button>
+  </form>
+</div>
