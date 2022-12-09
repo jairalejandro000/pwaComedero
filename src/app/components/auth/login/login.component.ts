@@ -34,11 +34,11 @@ export class LoginComponent implements OnInit {
     this.authService.login(this.user).subscribe({
       next: (v) => localStorage.setItem('token', v.data),
       error: (e) => {
-        this.toastr.error('no mameeeeesss', 'adios', { timeOut: 3000 })
+        this.toastr.error('Revisa tus credenciales', 'Ocurrió un error', { timeOut: 3000 })
         this.formLogin.reset()
       },
       complete: () => {
-        this.toastr.success('Ya jalaaan', 'Titulo perron', { timeOut: 3000 })
+        this.toastr.success('Inicio de sesión exitosa', 'Bienvenido', { timeOut: 3000 })
         this.router.navigate(['/home'])
       }
     });

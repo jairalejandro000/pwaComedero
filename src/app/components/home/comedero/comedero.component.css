@@ -7,6 +7,7 @@
     box-shadow: none;
 }
 .mat-grid-list {
+    margin-top: 5%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -16,4 +17,11 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+.mat-card-image{
+    width: 90%;
+    margin: auto;
+}
+.h3{
+    font-weight: bolder;
 }

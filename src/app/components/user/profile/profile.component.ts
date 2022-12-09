@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, Validators } from '@angular/forms';
 import { UserService } from 'src/app/services/user.service';
 import { IUser } from 'src/app/interfaces/user';
+import { MatDialog } from '@angular/material/dialog';
+import { InformationDialogComponent } from './information-dialog/information-dialog.component';
 
 @Component({
   selector: 'app-profile',
@@ -11,7 +13,8 @@ import { IUser } from 'src/app/interfaces/user';
 export class ProfileComponent implements OnInit {
   formProfile: FormGroup={} as FormGroup;
   user?: IUser;
-  constructor(private userService: UserService, ) {
+  constructor(private userService: UserService,
+    private dialog: MatDialog) {
     this.formBuilder();
    }
   ngOnInit(): void {
@@ -49,4 +52,7 @@ export class ProfileComponent implements OnInit {
     this.userService.logout();
   }
 
+  info(){
+    const dialogRef = this.dialog.open(InformationDialogComponent);
+  }
 }

@@ -36,9 +36,9 @@ export class RegisterComponent implements OnInit {
       password: this.formRegister.get('password')?.value
     }
     this.authService.register(this.user).subscribe({
-      next: (v) => this.toastr.success('Ya jalaaan', 'Titulo perron', { timeOut: 3000 }),
+      next: (v) => this.toastr.success('Cuenta registrada con exito', 'Cuenta registrada', { timeOut: 3000 }),
       error: (e) => {
-        this.toastr.error('no mameeeeesss', 'adios', { timeOut: 3000 })
+        this.toastr.error('Revisa tus credenciales', 'Ocurrió un error', { timeOut: 3000 })
         this.formRegister.reset()
       },
       complete: () => {

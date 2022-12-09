@@ -5,6 +5,11 @@
     [rowspan]='1'>
     <mat-card class='card' (click)='history(sensor.id)'>
         <img mat-card-image src ='../../../../assets/{{sensor.image}}.png'>
+        <mat-card-content>
+          <h3>
+            {{ sensor.name }}
+          </h3>
+        </mat-card-content>
       </mat-card>
     </mat-grid-tile>
 </mat-grid-list>

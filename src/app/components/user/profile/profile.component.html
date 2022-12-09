@@ -4,7 +4,8 @@
     <mat-icon (click)='logout()'>exit_to_app</mat-icon>
 </mat-toolbar>
 <div class='container'>
-    <img class='profile' src='../../../../assets/comedero-profile.png'><br>
+    <img class='profile' src='../../../../assets/comedero-profile.png'>
+    <mat-icon class='icon' (click)='info()'>subject</mat-icon><br>
     <form [formGroup]='formProfile'>
         <mat-form-field appearance='outline'>
             <mat-label>username</mat-label>

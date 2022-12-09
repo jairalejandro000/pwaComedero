@@ -1,0 +1,40 @@
+.container{
+    width: 80%;
+    height: auto;
+    margin: auto;
+    margin-top: 5%;
+    justify-content: center;
+    text-align: center;
+}
+h1{
+    font-size: 40px;
+}
+.catito{
+    width:50%;
+    height: auto;
+    margin-top: 40%;
+}
+@media (min-width: 400px){
+    .catito{
+        width:80%;
+        height: auto;
+        margin-top: 40%;
+        font-size: 40px;
+    }
+}
+@media (min-width: 600px){
+    .catito{
+        width:50%;
+        height: auto;
+        margin-top: 30%;
+        font-size: 500px;
+    }
+}
+@media (min-width: 1000px){
+    .catito{
+        width:30%;
+        height: auto;
+        margin-top: 0;
+        font-size: 200px;
+    }
+}

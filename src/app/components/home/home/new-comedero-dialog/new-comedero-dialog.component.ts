@@ -38,13 +38,13 @@ export class NewComederoDialogComponent implements OnInit {
     }
     this.comederoServiece.new(this.comedero).subscribe({
       next: (v: any) => {
-        this.toastr.success('Comedero agregado', 'Ahora podra acceder al comedero de su mascota', { timeOut: 3000 })
+        this.toastr.success('Ahora podra acceder al comedero de su mascota', 'Comedero agregado', { timeOut: 3000 })
         let response: any = v.data
         this.addSensors(response.id)
       },
       error: (e) => {
         this.formComedero.reset()
-        this.toastr.error('Ocurrió un error', 'Su comedero no se ha podido registrar', { timeOut: 3000 })
+        this.toastr.error('Su comedero no se ha podido registrar', 'Ocurrió un error', { timeOut: 3000 })
       },
     });
   }
