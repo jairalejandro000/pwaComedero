@@ -12,7 +12,7 @@ export class AppComponent implements OnInit {
   }
   ngOnInit() {
     this.os.init({
-      appId: 'f3e3245d-8d31-4421-a0ea-bf09e4c92571'
+      appId: '2c2f968d-67e3-4002-a7af-69dc0e2cd440'
     });
   }
   // onInit() {
