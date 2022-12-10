@@ -5,7 +5,7 @@
 <mat-grid-list [cols]='2' rowHeight='2:2'>
     <mat-grid-tile [colspan]='1'
     [rowspan]='1'>
-    <mat-card class='card' >
+    <mat-card class='card' (click)='comidita()'>
         <img mat-card-image src='../../../../assets/alimentos-para-mascotas.png'>
         <mat-card-content>
             <h2>
@@ -16,7 +16,7 @@
     </mat-grid-tile>
     <mat-grid-tile [colspan]='1'
     [rowspan]='1'>
-    <mat-card class='card' >
+    <mat-card class='card' (click)='aguita()'>
         <img mat-card-image src='../../../../assets/agua.png'>
         <mat-card-content>
             <h2>

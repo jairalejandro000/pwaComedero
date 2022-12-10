@@ -1,9 +1,11 @@
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Subject, takeUntil } from 'rxjs';
 import { ISensor } from 'src/app/interfaces/sensor';
 import { UserService } from 'src/app/services/user.service';
+import { ComederoDialogComponent } from './comedero-dialog/comedero-dialog.component';
 
 @Component({
   selector: 'app-comedero',
@@ -28,7 +30,8 @@ export class ComederoComponent implements OnInit {
 
   constructor(private route: ActivatedRoute,
     private userService: UserService,
-    private breakpointObserver: BreakpointObserver) {
+    private breakpointObserver: BreakpointObserver,
+    private router: Router, private dialog: MatDialog) {
     this.params = route.snapshot.params;
     this.id = this.params.id;
     breakpointObserver
@@ -84,7 +87,7 @@ export class ComederoComponent implements OnInit {
   }
 
   history(id: number): void {
-    console.log(id)
+    console.log(id);
   }
 
   addImage(): void{
@@ -106,6 +109,52 @@ export class ComederoComponent implements OnInit {
           x.image = "sensor-de-temperatura";
         break;
       }
+    }
+  }
+
+  clickedSensor(id: number, name: string){
+    switch(id){
+      case 1:
+        this.router.navigate(['//home/alimentar/' + this.id]);
+      break;
+      case 2:
+        //x.image = "bocina";
+        this.dialog.open(ComederoDialogComponent, {
+          height: '40%',
+          width: '60%',
+          data: {
+            sensor: name,
+            id: id
+          }
+        });
+
+      break;
+      case 3:
+        //x.image = "videollamada";
+        this.dialog.open(ComederoDialogComponent, {
+          height: '40%',
+          width: '60%',
+          data: {
+            sensor: name,
+            id: id
+          }
+        });
+      break;
+      case 4:
+        this.router.navigate(['//home/alimentar/' + this.id]);
+      break;
+      case 5:
+        //x.image = "sensor-de-temperatura";
+        this.dialog.open(ComederoDialogComponent, {
+          height: '40%',
+          width: '60%',
+          data: {
+            sensor: name,
+            id: id
+          }
+        });
+
+      break;
     }
   }
 

@@ -1,0 +1,14 @@
+<div class='container'>
+    <img *ngIf='sensor.id == 2 || sensor.id == 3' src='../../../../../assets/{{sensor.sensor}}.png'>
+    <mat-card class='card' *ngIf='sensor.id == 5'>
+        <mat-card-header>
+            <mat-card-title>Historial de sensor de temperatura</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <ng-container *ngFor='let value of historyValues'>
+            <h3>{{value.value_float}}</h3>
+            <h5 >{{value.date | date}}</h5>
+          </ng-container>
+        </mat-card-content>
+      </mat-card>
+</div>

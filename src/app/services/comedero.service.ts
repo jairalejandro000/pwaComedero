@@ -19,4 +19,7 @@ export class ComederoService {
   addSensors(id?: number){
     return this.http.get(`${environment.API_URL}RaspSensor/AddSensors/` + id);
   }
+  history(id?: number){
+    return this.http.get(`${environment.API_URL}SensorValues/History/` + id)
+  }
 }

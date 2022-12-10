@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { ComederoService } from 'src/app/services/comedero.service';
 
 @Component({
@@ -12,7 +13,8 @@ export class AlimentarComponent implements OnInit {
   params?: any;
   name: string = ''; 
   constructor(private route: ActivatedRoute,
-    private comederoService: ComederoService) {
+    private comederoService: ComederoService,
+    private toastr: ToastrService) {
     this.params = route.snapshot.params;
     this.id = this.params.id;
    }
@@ -28,6 +30,14 @@ export class AlimentarComponent implements OnInit {
       },
       error: (e) => console.log(e)
     });
+  }
+
+  aguita(){
+    this.toastr.success('Ya no se va a morir de sed', 'Mascota', { timeOut: 3000 })
+  }
+
+  comidita(){
+    this.toastr.success('Ya no se va a morir de hambre', 'Mascota', { timeOut: 3000 })
   }
 
 }
