@@ -77,13 +77,17 @@ export class ComederoComponent implements OnInit {
     this.userService.sensors(this.id).subscribe({
       next: (v: any) => {
         let response = v.data;
+        console.log(response);
         for(let x of response){
-          this.sensorsList?.push(x.sensor);
+          this.sensorsList?.push({
+            id: x.id,
+            type: x.sensor.id,
+            image: x.sensor.id});
         }
         this.addImage();
       },
       error: (e) => console.log(e)
-    })
+    });
   }
 
   history(id: number): void {
@@ -112,31 +116,31 @@ export class ComederoComponent implements OnInit {
     }
   }
 
-  clickedSensor(id: number, name: string){
+  clickedSensor(id: number, name: string, type?: number){
     switch(id){
       case 1:
         this.router.navigate(['//home/alimentar/' + this.id]);
       break;
       case 2:
-        //x.image = "bocina";
         this.dialog.open(ComederoDialogComponent, {
           height: '40%',
           width: '60%',
           data: {
+            id: id,
             sensor: name,
-            id: id
+            type: type
           }
         });
 
       break;
       case 3:
-        //x.image = "videollamada";
         this.dialog.open(ComederoDialogComponent, {
           height: '40%',
           width: '60%',
           data: {
+            id: id,
             sensor: name,
-            id: id
+            type: type
           }
         });
       break;
@@ -144,16 +148,15 @@ export class ComederoComponent implements OnInit {
         this.router.navigate(['//home/alimentar/' + this.id]);
       break;
       case 5:
-        //x.image = "sensor-de-temperatura";
         this.dialog.open(ComederoDialogComponent, {
           height: '40%',
           width: '60%',
           data: {
+            id: id,
             sensor: name,
-            id: id
+            type: type
           }
         });
-
       break;
     }
   }

@@ -3,5 +3,6 @@ export interface ISensor {
     name?: string,
     image?: string,
     sensor?: string,
-    value_float?: number
+    value_float?: number,
+    type?: number
 }

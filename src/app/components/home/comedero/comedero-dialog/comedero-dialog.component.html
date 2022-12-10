@@ -1,6 +1,6 @@
 <div class='container'>
-    <img *ngIf='sensor.id == 2 || sensor.id == 3' src='../../../../../assets/{{sensor.sensor}}.png'>
-    <mat-card class='card' *ngIf='sensor.id == 5'>
+    <img *ngIf='sensor.type == 2 || sensor.type == 3' src='../../../../../assets/{{sensor.sensor}}.png'>
+    <mat-card class='card' *ngIf='sensor.type == 5'>
         <mat-card-header>
             <mat-card-title>Historial de sensor de temperatura</mat-card-title>
         </mat-card-header>

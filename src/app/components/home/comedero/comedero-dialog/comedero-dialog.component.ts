@@ -15,7 +15,7 @@ export class ComederoDialogComponent implements OnInit {
   private comederoService: ComederoService) { }
 
   ngOnInit(): void {
-    if(this.sensor.id == 5){
+    if(this.sensor.type == 5){
       this.history();
     }
   }

@@ -3,7 +3,7 @@
     <mat-grid-tile *ngFor='let sensor of sensorsList'
     [colspan]='1'
     [rowspan]='1'>
-    <mat-card class='card' (click)='clickedSensor(sensor.id, sensor.image)'>
+    <mat-card class='card' (click)='clickedSensor(sensor.type, sensor.image, sensor.id)'>
         <img mat-card-image src ='../../../../assets/{{sensor.image}}.png'>
         <mat-card-content>
           <h3>
